@@ -922,6 +922,10 @@ section {
     border-top-color: #667eea;
 }
 
+.research-card:nth-child(4) {
+    border-top-color: #764ba2;
+}
+
 .research-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
@@ -1125,6 +1129,10 @@ section {
 
 .research-card:nth-child(3) .research-icon {
     animation-delay: 2s;
+}
+
+.research-card:nth-child(4) .research-icon {
+    animation-delay: 3s;
 }
 
 .research-card h3 {
