@@ -874,13 +874,8 @@ section {
 
 .research-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-}
-
-.research-grid .research-card:nth-child(4) {
-    grid-column: 2;
-    justify-self: center;
 }
 
 .research-card {
@@ -1699,12 +1694,14 @@ section {
     }
 
     .research-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
     
-    .research-grid .research-card:nth-child(4) {
-        grid-column: 1;
-        justify-self: stretch;
+    @media (max-width: 640px) {
+        .research-grid {
+            grid-template-columns: 1fr;
+        }
     }
 
     .research-images {
