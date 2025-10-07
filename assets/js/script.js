@@ -81,12 +81,24 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Parallax effect for hero section
+// Parallax effect for hero section (throttled for performance)
 const hero = document.querySelector('.hero');
-window.addEventListener('scroll', () => {
+let ticking = false;
+
+function updateParallax() {
     const scrolled = window.pageYOffset;
     const parallax = scrolled * 0.5;
-    hero.style.transform = `translateY(${parallax}px)`;
+    if (hero) {
+        hero.style.transform = `translateY(${parallax}px)`;
+    }
+    ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+    }
 });
 
 // Add animation to cards on scroll
