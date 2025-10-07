@@ -189,28 +189,32 @@ function toggleFutureStartups() {
 
 // Initialize all publication lists as collapsed by default
 document.addEventListener('DOMContentLoaded', function() {
-    const years = ['2025', '2024', '2023'];
-    years.forEach(year => {
-        const publications = document.getElementById(`publications-${year}`);
-        const icon = document.getElementById(`icon-${year}`);
-        
-        if (publications && icon) {
-            publications.style.display = 'none';
-            icon.textContent = '▼';
+    try {
+        const years = ['2025', '2024', '2023'];
+        years.forEach(year => {
+            const publications = document.getElementById(`publications-${year}`);
+            const icon = document.getElementById(`icon-${year}`);
+            
+            if (publications && icon) {
+                publications.style.display = 'none';
+                icon.textContent = '▼';
+            }
+        });
+
+        // Initialize future startups section as hidden
+        const futureStartups = document.getElementById('futureStartups');
+        if (futureStartups) {
+            futureStartups.style.display = 'none';
         }
-    });
 
-    // Initialize future startups section as hidden
-    const futureStartups = document.getElementById('futureStartups');
-    if (futureStartups) {
-        futureStartups.style.display = 'none';
+        // Initialize scroll animations
+        initScrollAnimations();
+        
+        // Initialize progress bar animations
+        initProgressBars();
+    } catch (error) {
+        console.error('Error during initialization:', error);
     }
-
-    // Initialize scroll animations
-    initScrollAnimations();
-    
-    // Initialize progress bar animations
-    initProgressBars();
 });
 
 // Scroll animation functionality
