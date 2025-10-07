@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page - Khaled Alsamri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #1a1a2e;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #00d4ff;
+        }
+        .test-section {
+            background: #16213e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 1px solid #00d4ff;
+        }
+        button {
+            background: #00d4ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background: #4ecdc4;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Page - Website Functionality</h1>
+        
+        <div class="test-section">
+            <h2>JavaScript Test</h2>
+            <button onclick="testFunction()">Test JavaScript</button>
+            <p id="test-result">Click the button to test JavaScript functionality</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>Toggle Test</h2>
+            <button onclick="toggleTest()">Toggle Content</button>
+            <div id="toggle-content" class="hidden">
+                <p>This content can be toggled!</p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Performance Test</h2>
+            <button onclick="performanceTest()">Run Performance Test</button>
+            <p id="perf-result">Click to test performance</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>Links</h2>
+            <p><a href="https://www.khaledalsamri.com" style="color: #00d4ff;">Main Website</a></p>
+            <p><a href="https://www.khaledalsamri.com/startups.html" style="color: #00d4ff;">Startups Page</a></p>
+        </div>
+    </div>
+
+    <script>
+        function testFunction() {
+            document.getElementById('test-result').textContent = 'JavaScript is working! ✅';
+            document.getElementById('test-result').style.color = '#4ecdc4';
+        }
+        
+        function toggleTest() {
+            const content = document.getElementById('toggle-content');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+            }
+        }
+        
+        function performanceTest() {
+            const start = performance.now();
+            let result = 0;
+            for (let i = 0; i < 1000000; i++) {
+                result += Math.random();
+            }
+            const end = performance.now();
+            document.getElementById('perf-result').textContent = `Performance test completed in ${(end - start).toFixed(2)}ms ✅`;
+            document.getElementById('perf-result').style.color = '#4ecdc4';
+        }
+        
+        // Test page load
+        console.log('Test page loaded successfully');
+    </script>
+</body>
+</html>
