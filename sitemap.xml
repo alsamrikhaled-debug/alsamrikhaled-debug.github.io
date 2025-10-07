@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ai="https://schema.org"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
     <!-- Homepage -->
+    <url>
+        <loc>https://khaledalsamri.com/</loc>
+        <lastmod>2025-01-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <ai:content-type>academic-research-portfolio</ai:content-type>
+        <ai:content-category>mechanical-engineering,aerospace-engineering,hydrogen-technology,sustainable-aviation</ai:content-category>
+        <ai:content-description>Professional research portfolio of Dr. Khaled Alsamri, Assistant Professor of Mechanical & Aerospace Engineering at UAE University, specializing in hydrogen power systems and sustainable aviation technology</ai:content-description>
+        <ai:keywords>Dr. Khaled Alsamri, Mechanical Engineering, Aerospace Engineering, Hydrogen Power Systems, Sustainable Aviation, Fuel Cell Technology, Blended Wing Body Aircraft, UAE University, Rectify, Carbon Credits, Renewable Energy, Clean Aviation, Research, Publications</ai:keywords>
+    </url>
+    
+    <!-- Google-specific sitemap entry for better indexing -->
     <url>
         <loc>https://khaledalsamri.com/</loc>
         <lastmod>2025-01-03</lastmod>
@@ -18,6 +31,10 @@
         <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <ai:content-type>startup-company-page</ai:content-type>
+        <ai:content-category>startup,clean-technology,carbon-reduction,renewable-energy</ai:content-category>
+        <ai:content-description>Information about Rectify, a clean technology startup founded by Dr. Khaled Alsamri, specializing in carbon reduction solutions and renewable energy certificates</ai:content-description>
+        <ai:keywords>Rectify, startup, clean technology, carbon reduction, renewable energy certificates, net zero, sustainability, environmental solutions</ai:keywords>
     </url>
     
     <!-- Research section -->
@@ -26,6 +43,10 @@
         <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <ai:content-type>research-focus-section</ai:content-type>
+        <ai:content-category>research,hydrogen-technology,fuel-cells,aircraft-design,sustainable-aviation</ai:content-category>
+        <ai:content-description>Research focus areas including hydrogen powertrains, storage solutions, fuel cell systems, and advanced aircraft concepts for sustainable aviation</ai:content-description>
+        <ai:keywords>hydrogen powertrains, storage solutions, fuel cell systems, blended wing body aircraft, sustainable aviation, zero-emission flight</ai:keywords>
     </url>
     
     <!-- Publications section -->
@@ -34,6 +55,10 @@
         <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <ai:content-type>academic-publications</ai:content-type>
+        <ai:content-category>research-publications,scholarly-articles,academic-papers,peer-reviewed</ai:content-category>
+        <ai:content-description>Published research papers and articles by Dr. Khaled Alsamri on hydrogen power systems, fuel cell technology, and sustainable aviation research</ai:content-description>
+        <ai:keywords>research publications, scholarly articles, hydrogen fuel cells, sustainable aviation, Journal of Aircraft, Energy Conversion and Management, AIAA</ai:keywords>
     </url>
     
     <!-- About section -->
@@ -42,6 +67,10 @@
         <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <ai:content-type>personal-bio-section</ai:content-type>
+        <ai:content-category>biography,professional-background,research-interests,career-overview</ai:content-category>
+        <ai:content-description>Professional biography and background of Dr. Khaled Alsamri, including research interests in clean aviation and industry decarbonization</ai:content-description>
+        <ai:keywords>biography, professional background, research interests, clean aviation, industry decarbonization, hydrogen research</ai:keywords>
     </url>
     
     <!-- Experience section -->
@@ -50,6 +79,10 @@
         <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <ai:content-type>professional-experience</ai:content-type>
+        <ai:content-category>work-experience,academic-positions,startup-founder,professional-roles</ai:content-category>
+        <ai:content-description>Current professional roles including Assistant Professor at UAE University and Founder of Rectify clean technology startup</ai:content-description>
+        <ai:keywords>Assistant Professor, UAE University, Founder, Rectify, professional experience, academic positions</ai:keywords>
     </url>
     
     <!-- Education section -->
@@ -58,6 +91,10 @@
         <lastmod>2025-01-03</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
+        <ai:content-type>academic-credentials</ai:content-type>
+        <ai:content-category>education,degrees,academic-credentials,university-background</ai:content-category>
+        <ai:content-description>Academic credentials including Ph.D. and Master's degrees in Mechanical & Aerospace Engineering from UC Irvine, and Bachelor's from Florida Institute of Technology</ai:content-description>
+        <ai:keywords>Ph.D., Master's, Bachelor's, Mechanical Engineering, Aerospace Engineering, UC Irvine, Florida Institute of Technology, academic credentials</ai:keywords>
     </url>
     
     <!-- Contact section -->
@@ -66,6 +103,10 @@
         <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        <ai:content-type>contact-information</ai:content-type>
+        <ai:content-category>contact,communication,professional-inquiries,collaboration</ai:content-category>
+        <ai:content-description>Contact information for Dr. Khaled Alsamri, including email for research collaboration and academic opportunities</ai:content-description>
+        <ai:keywords>contact, email, research collaboration, academic opportunities, professional inquiries</ai:keywords>
     </url>
     
 </urlset>

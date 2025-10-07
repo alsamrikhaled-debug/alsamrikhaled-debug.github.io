@@ -4,6 +4,9 @@ Allow: /
 # Sitemap location
 Sitemap: https://khaledalsamri.com/sitemap.xml
 
+# AI Crawl Instructions
+# For detailed AI crawling guidelines, see: https://khaledalsamri.com/ai-crawl-instructions.txt
+
 # Crawl delay (optional - helps prevent overloading server)
 Crawl-delay: 1
 
@@ -20,6 +23,64 @@ Allow: /
 Crawl-delay: 1
 
 User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# AI and Machine Learning Crawlers
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 1
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bard
+Allow: /
+Crawl-delay: 1
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: YouBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: MetaAI
+Allow: /
+Crawl-delay: 1
+
+User-agent: AI2Bot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Applebot-Extended
+Allow: /
+Crawl-delay: 1
+
+# Research and Academic Crawlers
+User-agent: SemanticScholarBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ResearchGateBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: AcademiaBot
 Allow: /
 Crawl-delay: 1
 

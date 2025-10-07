@@ -125,6 +125,56 @@ function toggleYear(year) {
     }
 }
 
+// Toggle future startups section
+function toggleFutureStartups() {
+    const futureStartups = document.getElementById('futureStartups');
+    const toggleBtn = document.getElementById('futureToggleBtn');
+    const toggleText = toggleBtn.querySelector('.toggle-text');
+    const toggleArrow = toggleBtn.querySelector('.toggle-arrow svg');
+    
+    if (futureStartups.style.display === 'none' || futureStartups.style.display === '') {
+        // Show the section
+        futureStartups.style.display = 'block';
+        futureStartups.style.opacity = '0';
+        futureStartups.style.transform = 'translateY(30px)';
+        
+        // Update button
+        toggleText.textContent = 'Hide Future Ventures';
+        toggleArrow.style.transform = 'rotate(180deg)';
+        toggleBtn.classList.add('active');
+        
+        // Animate in
+        setTimeout(() => {
+            futureStartups.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+            futureStartups.style.opacity = '1';
+            futureStartups.style.transform = 'translateY(0)';
+        }, 50);
+        
+        // Smooth scroll to the section
+        setTimeout(() => {
+            futureStartups.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start',
+                inline: 'nearest'
+            });
+        }, 300);
+    } else {
+        // Hide the section
+        futureStartups.style.transition = 'all 0.4s ease';
+        futureStartups.style.opacity = '0';
+        futureStartups.style.transform = 'translateY(30px)';
+        
+        // Update button
+        toggleText.textContent = 'Explore Future Ventures';
+        toggleArrow.style.transform = 'rotate(0deg)';
+        toggleBtn.classList.remove('active');
+        
+        setTimeout(() => {
+            futureStartups.style.display = 'none';
+        }, 400);
+    }
+}
+
 // Initialize all publication lists as collapsed by default
 document.addEventListener('DOMContentLoaded', function() {
     const years = ['2025', '2024', '2023'];
@@ -138,8 +188,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Initialize future startups section as hidden
+    const futureStartups = document.getElementById('futureStartups');
+    if (futureStartups) {
+        futureStartups.style.display = 'none';
+    }
+
     // Initialize scroll animations
     initScrollAnimations();
+    
+    // Initialize progress bar animations
+    initProgressBars();
 });
 
 // Scroll animation functionality
@@ -160,6 +219,30 @@ function initScrollAnimations() {
     // Observe all scroll-animate elements
     document.querySelectorAll('.scroll-animate').forEach(el => {
         observer.observe(el);
+    });
+}
+
+// Progress bar animation functionality
+function initProgressBars() {
+    const progressBars = document.querySelectorAll('.progress-fill');
+    
+    const progressObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBar = entry.target;
+                const width = progressBar.style.width;
+                
+                // Reset width to 0 and animate to target width
+                progressBar.style.width = '0%';
+                setTimeout(() => {
+                    progressBar.style.width = width;
+                }, 200);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    progressBars.forEach(bar => {
+        progressObserver.observe(bar);
     });
 }
 

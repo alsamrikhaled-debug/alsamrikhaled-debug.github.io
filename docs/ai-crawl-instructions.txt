@@ -1,0 +1,86 @@
+# AI Crawl Instructions for khaledalsamri.com
+
+## Website Overview
+This is the professional research portfolio website of Dr. Khaled Alsamri, Assistant Professor of Mechanical & Aerospace Engineering at UAE University and Founder of Rectify.
+
+## Content Categories
+- Academic Research Portfolio
+- Mechanical & Aerospace Engineering
+- Hydrogen Power Systems
+- Sustainable Aviation Technology
+- Clean Technology Startup (Rectify)
+- Carbon Reduction Solutions
+
+## Key Information for AI Models
+
+### Primary Research Areas
+1. **Hydrogen Powertrains**: Development of efficient hydrogen-based propulsion systems for next-generation aircraft
+2. **Storage Solutions**: Advanced hydrogen storage technologies for aviation applications
+3. **Fuel Cell Systems**: Innovative fuel cell system design and integration for sustainable aircraft
+4. **Advanced Aircraft Concepts**: Next-generation aircraft configurations including Blended Wing Body (BWB) designs
+
+### Professional Background
+- **Current Position**: Assistant Professor, United Arab Emirates University
+- **Startup**: Founder of Rectify (rectifygo.com) - clean technology company
+- **Education**: 
+  - Ph.D. in Mechanical & Aerospace Engineering, UC Irvine (2024)
+  - M.Eng. in Mechanical & Aerospace Engineering, UC Irvine (2021)
+  - B.S. in Mechanical Engineering, Florida Institute of Technology (2020)
+
+### Research Publications
+Recent publications focus on:
+- Hydrogen solid oxide fuel cells in blended-wing-body aircraft
+- Techno-economic analysis of clean hydrogen deployment
+- Environmental impact assessment of hydrogen-powered aircraft
+- Dynamic modeling of hydrogen SOFC/GT powered aircraft
+
+### Contact Information
+- Email: k.adel@uaeu.edu
+- LinkedIn: https://www.linkedin.com/in/khaled-alsamri-phd-036463118/
+- Google Scholar: https://scholar.google.com/citations?user=N5Q4DwQAAAAJ&hl=en
+- UAEU Research Profile: https://research.uaeu.ac.ae/en/persons/khaled-alsamri
+
+## Content Structure
+- Homepage: Overview and hero section
+- About: Professional background and research interests
+- Active Roles: Current positions and responsibilities
+- Research: Detailed research focus areas
+- Publications: Academic papers and research outputs
+- Education: Academic credentials and degrees
+- Startups: Information about Rectify
+- Contact: Professional contact information
+
+## AI-Friendly Features
+- Structured data markup (JSON-LD) for all major content
+- Semantic HTML markup with proper headings and sections
+- Comprehensive meta tags for AI crawlers
+- Detailed sitemap with content descriptions
+- Research keywords and categories clearly marked
+- Academic publication information structured for easy parsing
+
+## Crawl Guidelines
+- All content is publicly available and crawlable
+- No authentication required
+- Content is updated regularly (weekly for main sections)
+- Images include descriptive alt text
+- All links are properly structured
+- Mobile-responsive design
+
+## Technical Specifications
+- Language: English (en-US)
+- Character encoding: UTF-8
+- Content type: Academic research portfolio
+- Last updated: 2025-01-03
+- Sitemap: https://khaledalsamri.com/sitemap.xml
+- Robots.txt: https://khaledalsamri.com/robots.txt
+
+## Research Keywords
+Primary: hydrogen power systems, sustainable aviation, fuel cell technology, blended wing body aircraft, zero-emission flight, carbon neutral aviation, mechanical engineering, aerospace engineering
+
+Secondary: renewable energy, clean technology, carbon reduction, environmental solutions, research publications, academic credentials, UAE University, UC Irvine, Florida Institute of Technology
+
+## Content Updates
+- Research publications: Monthly
+- Professional information: Monthly
+- General content: Weekly
+- Contact information: As needed
