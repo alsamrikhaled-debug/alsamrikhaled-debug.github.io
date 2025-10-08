@@ -2029,43 +2029,39 @@ section {
 
     /* Future Concepts - Clean Modern Design */
     .future-concepts-container {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.5rem;
+        margin-top: 1.5rem;
     }
 
     .concept-row {
         display: flex;
         align-items: flex-start;
-        gap: 2rem;
-        background: white;
-        padding: 2rem;
-        border-radius: 16px;
-        border: 2px solid var(--border-color);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        gap: 1rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
     }
 
     .concept-row:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 32px rgba(37, 99, 235, 0.12);
-        border-color: var(--primary-color);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
 
     .concept-logo-box {
         flex-shrink: 0;
-        width: 24px;
-        height: 24px;
+        width: 40px;
+        height: 40px;
         background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
-        border-radius: 6px;
+        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
         border: 1px solid rgba(37, 99, 235, 0.1);
         transition: all 0.3s ease;
-        margin-top: 2px;
     }
 
     .concept-row:hover .concept-logo-box {
@@ -2075,8 +2071,8 @@ section {
     }
 
     .concept-icon {
-        width: 16px;
-        height: 16px;
+        width: 24px;
+        height: 24px;
         object-fit: contain;
     }
 
@@ -2102,20 +2098,22 @@ section {
 
     /* Responsive */
     @media (max-width: 768px) {
+        .future-concepts-container {
+            grid-template-columns: 1fr;
+        }
+
         .concept-row {
-            flex-direction: column;
-            gap: 1.25rem;
-            padding: 1.5rem;
+            padding: 1rem;
         }
 
         .concept-logo-box {
-            width: 20px;
-            height: 20px;
+            width: 32px;
+            height: 32px;
         }
 
         .concept-icon {
-            width: 14px;
-            height: 14px;
+            width: 20px;
+            height: 20px;
         }
 
         .concept-title {
