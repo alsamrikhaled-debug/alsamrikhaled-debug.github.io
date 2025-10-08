@@ -81,24 +81,12 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Parallax effect for hero section (throttled for performance)
+// Parallax effect for hero section
 const hero = document.querySelector('.hero');
-let ticking = false;
-
-function updateParallax() {
+window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallax = scrolled * 0.5;
-    if (hero) {
-        hero.style.transform = `translateY(${parallax}px)`;
-    }
-    ticking = false;
-}
-
-window.addEventListener('scroll', () => {
-    if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-    }
+    hero.style.transform = `translateY(${parallax}px)`;
 });
 
 // Add animation to cards on scroll
@@ -142,7 +130,7 @@ function toggleFutureStartups() {
     const futureStartups = document.getElementById('futureStartups');
     const toggleBtn = document.getElementById('futureToggleBtn');
     const toggleText = toggleBtn.querySelector('.toggle-text');
-    const toggleArrow = toggleBtn.querySelector('.toggle-arrow svg');
+    const toggleIcon = toggleBtn.querySelector('.toggle-icon svg');
     
     if (futureStartups.style.display === 'none' || futureStartups.style.display === '') {
         // Show the section
@@ -151,8 +139,8 @@ function toggleFutureStartups() {
         futureStartups.style.transform = 'translateY(30px)';
         
         // Update button
-        toggleText.textContent = 'Hide Future Ventures';
-        toggleArrow.style.transform = 'rotate(180deg)';
+        toggleText.textContent = 'Hide Future Ideas';
+        toggleIcon.style.transform = 'rotate(180deg)';
         toggleBtn.classList.add('active');
         
         // Animate in
@@ -177,8 +165,8 @@ function toggleFutureStartups() {
         futureStartups.style.transform = 'translateY(30px)';
         
         // Update button
-        toggleText.textContent = 'Explore Future Ventures';
-        toggleArrow.style.transform = 'rotate(0deg)';
+        toggleText.textContent = 'Explore Future Ideas';
+        toggleIcon.style.transform = 'rotate(0deg)';
         toggleBtn.classList.remove('active');
         
         setTimeout(() => {
@@ -189,32 +177,25 @@ function toggleFutureStartups() {
 
 // Initialize all publication lists as collapsed by default
 document.addEventListener('DOMContentLoaded', function() {
-    try {
-        const years = ['2025', '2024', '2023'];
-        years.forEach(year => {
-            const publications = document.getElementById(`publications-${year}`);
-            const icon = document.getElementById(`icon-${year}`);
-            
-            if (publications && icon) {
-                publications.style.display = 'none';
-                icon.textContent = '▼';
-            }
-        });
-
-        // Initialize future startups section as hidden
-        const futureStartups = document.getElementById('futureStartups');
-        if (futureStartups) {
-            futureStartups.style.display = 'none';
-        }
-
-        // Initialize scroll animations
-        initScrollAnimations();
+    const years = ['2025', '2024', '2023'];
+    years.forEach(year => {
+        const publications = document.getElementById(`publications-${year}`);
+        const icon = document.getElementById(`icon-${year}`);
         
-        // Initialize progress bar animations
-        initProgressBars();
-    } catch (error) {
-        console.error('Error during initialization:', error);
+        if (publications && icon) {
+            publications.style.display = 'none';
+            icon.textContent = '▼';
+        }
+    });
+
+    // Initialize future startups section as hidden
+    const futureStartups = document.getElementById('futureStartups');
+    if (futureStartups) {
+        futureStartups.style.display = 'none';
     }
+
+    // Initialize scroll animations
+    initScrollAnimations();
 });
 
 // Scroll animation functionality
@@ -235,30 +216,6 @@ function initScrollAnimations() {
     // Observe all scroll-animate elements
     document.querySelectorAll('.scroll-animate').forEach(el => {
         observer.observe(el);
-    });
-}
-
-// Progress bar animation functionality
-function initProgressBars() {
-    const progressBars = document.querySelectorAll('.progress-fill');
-    
-    const progressObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const progressBar = entry.target;
-                const width = progressBar.style.width;
-                
-                // Reset width to 0 and animate to target width
-                progressBar.style.width = '0%';
-                setTimeout(() => {
-                    progressBar.style.width = width;
-                }, 200);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    progressBars.forEach(bar => {
-        progressObserver.observe(bar);
     });
 }
 
