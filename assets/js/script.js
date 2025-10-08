@@ -144,46 +144,44 @@ function toggleFutureStartups() {
     const toggleText = toggleBtn.querySelector('.toggle-text');
     const toggleIcon = toggleBtn.querySelector('.toggle-icon svg');
     
-    if (futureStartups.style.display === 'none' || futureStartups.style.display === '') {
-        // Show the section
-        futureStartups.style.display = 'block';
+    if (futureStartups.hasAttribute('hidden')) {
+        futureStartups.removeAttribute('hidden');
         futureStartups.style.opacity = '0';
-        futureStartups.style.transform = 'translateY(30px)';
+        futureStartups.style.transform = 'translateY(20px)';
+        futureStartups.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
         
-        // Update button
         toggleText.textContent = 'Hide Future Ideas';
-        toggleIcon.style.transform = 'rotate(180deg)';
         toggleBtn.classList.add('active');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        toggleIcon.style.transform = 'rotate(180deg)';
         
-        // Animate in
-        setTimeout(() => {
-            futureStartups.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        requestAnimationFrame(() => {
             futureStartups.style.opacity = '1';
             futureStartups.style.transform = 'translateY(0)';
-        }, 50);
+        });
         
-        // Smooth scroll to the section
         setTimeout(() => {
-            futureStartups.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start',
-                inline: 'nearest'
+            futureStartups.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
-        }, 300);
+        }, 200);
     } else {
-        // Hide the section
-        futureStartups.style.transition = 'all 0.4s ease';
+        futureStartups.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
         futureStartups.style.opacity = '0';
-        futureStartups.style.transform = 'translateY(30px)';
+        futureStartups.style.transform = 'translateY(10px)';
         
-        // Update button
         toggleText.textContent = 'Explore Future Ideas';
-        toggleIcon.style.transform = 'rotate(0deg)';
         toggleBtn.classList.remove('active');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleIcon.style.transform = 'rotate(0deg)';
         
         setTimeout(() => {
-            futureStartups.style.display = 'none';
-        }, 400);
+            futureStartups.setAttribute('hidden', '');
+            futureStartups.style.opacity = '';
+            futureStartups.style.transform = '';
+            futureStartups.style.transition = '';
+        }, 220);
     }
 }
 
@@ -202,8 +200,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize future startups section as hidden
     const futureStartups = document.getElementById('futureStartups');
-    if (futureStartups) {
-        futureStartups.style.display = 'none';
+    const futureToggleBtn = document.getElementById('futureToggleBtn');
+    if (futureStartups && futureToggleBtn) {
+        futureStartups.setAttribute('hidden', '');
+        futureToggleBtn.setAttribute('aria-expanded', 'false');
     }
 
     // Initialize scroll animations
@@ -230,5 +230,3 @@ function initScrollAnimations() {
         observer.observe(el);
     });
 }
-
-

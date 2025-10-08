@@ -168,7 +168,7 @@
                 
                 <!-- Future Ideas Toggle Section -->
                 <div class="future-ideas-toggle-section">
-                    <button class="future-ideas-toggle-btn" onclick="toggleFutureStartups()" id="futureToggleBtn">
+                    <button class="future-ideas-toggle-btn" onclick="toggleFutureStartups()" id="futureToggleBtn" aria-controls="futureStartups" aria-expanded="false">
                         <span class="toggle-text">Explore Future Ideas</span>
                         <div class="toggle-icon">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -179,166 +179,140 @@
                 </div>
                 
                 <!-- Future Startups Section -->
-                <div class="future-startups-section" id="futureStartups">
+                <div class="future-startups-section" id="futureStartups" hidden>
+                    <div class="future-startups-intro">
+                        <span class="future-startups-subtitle">Pipeline Concepts</span>
+                        <h3 class="future-startups-title">Future Ideas Aligned with RectifyGo</h3>
+                        <p class="future-startups-description">
+                            Focused, execution-ready concepts that extend RectifyGo's decarbonization mission into
+                            adjacent industries. Each initiative is scoped with the same rigor, governance, and data-first
+                            approach that anchors the current platform.
+                        </p>
+                    </div>
+
                     <div class="future-startups-grid">
-                        <!-- HydroVolt -->
-                        <div class="future-startup-card hydrovolt-card">
-                            <div class="card-glow"></div>
-                            <div class="future-startup-header">
-                                <div class="startup-logo-wrapper">
+                        <article class="future-startup-card" data-theme="green">
+                            <div class="future-startup-meta">
+                                <div class="future-startup-brand">
                                     <img src="assets/images/hydrovolt.png" alt="HydroVolt Logo" class="future-startup-logo">
-                                    <div class="logo-glow"></div>
-                                </div>
-                                <div class="startup-info">
-                                    <h4 class="future-startup-name">HydroVolt</h4>
-                                    <div class="status-badge">
-                                        <span class="status-dot"></span>
-                                        <span class="status-text">In Development</span>
+                                    <div class="future-startup-heading">
+                                        <h4 class="future-startup-name">HydroVolt</h4>
+                                        <span class="future-startup-status">In Development</span>
                                     </div>
                                 </div>
+                                <span class="future-startup-tag">Hydrogen Data Infrastructure</span>
                             </div>
-                            
-                            <div class="future-startup-content">
-                                <div class="startup-tagline">
-                                    <h5>Hydrogen-Powered AI Infrastructure</h5>
-                                </div>
-                                
-                                <div class="startup-description">
-                                    <p>Power the world's AI and cloud infrastructure with modular hydrogen fuel-cell systems that deliver zero-carbon resilience, grid flexibility, and long-term energy security—everywhere data lives.</p>
-                                </div>
-                                
-                                <div class="startup-highlights">
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M9 12l2 2 4-4"/>
-                                                <circle cx="12" cy="12" r="10"/>
-                                            </svg>
-                                        </div>
-                                        <div class="highlight-content">
-                                            <strong>Zero-Carbon Energy</strong>
-                                            <p>Modular hydrogen fuel-cell systems for clean power generation</p>
-                                        </div>
+                            <p class="future-startup-summary">
+                                Modular hydrogen power blocks engineered to keep AI and cloud campuses online with
+                                verifiable zero-carbon resilience and grid-independent uptime.
+                            </p>
+                            <ul class="future-startup-highlights">
+                                <li>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 12l2 2 4-4"/>
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Zero-carbon uptime</strong>
+                                        <p>Fuel-cell clusters sized for hyperscale and edge deployments with 24/7 monitoring.</p>
                                     </div>
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
-                                                <path d="M21 3v5h-5"/>
-                                                <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
-                                                <path d="M3 21v-5h5"/>
-                                            </svg>
-                                        </div>
-                                        <div class="highlight-content">
-                                            <strong>Grid Resilience</strong>
-                                            <p>Enhanced energy security and backup power solutions</p>
-                                        </div>
+                                </li>
+                                <li>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                                        <path d="M21 3v5h-5"/>
+                                        <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+                                        <path d="M3 21v-5h5"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Grid flexibility</strong>
+                                        <p>Load balancing intelligence that smooths peak draw and supports renewable curtailment.</p>
                                     </div>
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                        </div>
-                                        <div class="highlight-content">
-                                            <strong>Modular Systems</strong>
-                                            <p>Scalable solutions for any infrastructure size</p>
-                                        </div>
+                                </li>
+                                <li>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Scalable modules</strong>
+                                        <p>Pre-certified containerized systems that deploy quickly across global sites.</p>
                                     </div>
-                                </div>
-                                
-                                <div class="startup-contact">
-                                    <a href="mailto:khaled.alsamri@uaeu.ac.ae" class="contact-btn">
-                                        <span>Join the Mission</span>
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                                        </svg>
-                                    </a>
-                                </div>
+                                </li>
+                            </ul>
+                            <div class="future-startup-actions">
+                                <a href="mailto:khaled.alsamri@uaeu.ac.ae" class="future-startup-link">
+                                    Request a briefing
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    </svg>
+                                </a>
                             </div>
-                        </div>
-                        
-                        <!-- HyBlend -->
-                        <div class="future-startup-card hyblend-card">
-                            <div class="card-glow"></div>
-                            <div class="future-startup-header">
-                                <div class="startup-logo-wrapper">
+                        </article>
+
+                        <article class="future-startup-card" data-theme="amber">
+                            <div class="future-startup-meta">
+                                <div class="future-startup-brand">
                                     <img src="assets/images/hyblend.png" alt="HyBlend Logo" class="future-startup-logo">
-                                    <div class="logo-glow"></div>
-                                </div>
-                                <div class="startup-info">
-                                    <h4 class="future-startup-name">HyBlend</h4>
-                                    <div class="status-badge">
-                                        <span class="status-dot"></span>
-                                        <span class="status-text">In Development</span>
+                                    <div class="future-startup-heading">
+                                        <h4 class="future-startup-name">HyBlend</h4>
+                                        <span class="future-startup-status">Concept Lab</span>
                                     </div>
                                 </div>
+                                <span class="future-startup-tag">Hydrogen Supply Analytics</span>
                             </div>
-                            
-                            <div class="future-startup-content">
-                                <div class="startup-tagline">
-                                    <h5>Hydrogen-Powered Delivery Drones</h5>
-                                </div>
-                                
-                                <div class="startup-description">
-                                    <p>Revolutionizing last-mile delivery with hydrogen-powered blended wing body (BWB) drones that offer extended range, zero emissions, and efficient cargo transport for urban and remote areas.</p>
-                                </div>
-                                
-                                <div class="startup-highlights">
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                            </svg>
-                                        </div>
-                                        <div class="highlight-content">
-                                            <strong>Blended Wing Design</strong>
-                                            <p>Revolutionary aerodynamic efficiency for maximum range and payload capacity</p>
-                                        </div>
+                            <p class="future-startup-summary">
+                                A digital assurance layer that certifies every kilogram of hydrogen delivered to aviation
+                                and heavy mobility partners, tying emissions reporting directly to operational data.
+                            </p>
+                            <ul class="future-startup-highlights">
+                                <li>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Assured provenance</strong>
+                                        <p>End-to-end tracking and tamper-proof certificates for clean hydrogen deliveries.</p>
                                     </div>
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M9 12l2 2 4-4"/>
-                                                <circle cx="12" cy="12" r="10"/>
-                                            </svg>
-                                        </div>
-                                        <div class="highlight-content">
-                                            <strong>Zero Emissions</strong>
-                                            <p>Clean hydrogen power for sustainable delivery operations</p>
-                                        </div>
+                                </li>
+                                <li>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 12l2 2 4-4"/>
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Predictive planning</strong>
+                                        <p>Digital twins that model storage, transport, and refueling demand scenarios.</p>
                                     </div>
-                                    <div class="highlight-item">
-                                        <div class="highlight-icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M3 3v18h18"/>
-                                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
-                                            </svg>
-                                        </div>
-                                        <div class="highlight-content">
-                                            <strong>Long Range</strong>
-                                            <p>Extended flight capabilities for remote and urban deliveries</p>
-                                        </div>
+                                </li>
+                                <li>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 21h18"/>
+                                        <path d="M5 21V7l8-4v18"/>
+                                        <path d="M19 21V11l-6-4"/>
+                                        <path d="M9 9h.01"/>
+                                        <path d="M9 12h.01"/>
+                                        <path d="M9 15h.01"/>
+                                        <path d="M9 18h.01"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Regulatory-ready</strong>
+                                        <p>Automated documentation aligned with ICAO, ASTM, and regional hydrogen mandates.</p>
                                     </div>
-                                </div>
-                                
-                                <div class="startup-contact">
-                                    <a href="mailto:khaled.alsamri@uaeu.ac.ae" class="contact-btn">
-                                        <span>Join the Mission</span>
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                                        </svg>
-                                    </a>
-                                </div>
+                                </li>
+                            </ul>
+                            <div class="future-startup-actions">
+                                <a href="mailto:khaled.alsamri@uaeu.ac.ae" class="future-startup-link">
+                                    Join the pilot list
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    </svg>
+                                </a>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+                
+                <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">

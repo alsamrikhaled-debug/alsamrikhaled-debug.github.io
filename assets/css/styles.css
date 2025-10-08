@@ -1983,251 +1983,258 @@ section {
     .toggle-icon svg {
         width: 20px;
         height: 20px;
+        transition: transform 0.3s ease;
     }
     
     /* Future Startups Section */
     .future-startups-section {
-        margin-top: 3rem;
+        margin-top: 2.5rem;
         padding: 0;
-        background: transparent;
     }
-    
+
     .future-startups-intro {
+        max-width: 720px;
+        margin: 0 auto 2.5rem;
         text-align: center;
-        margin-bottom: 3rem;
     }
-    
-    .future-startups-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        background: linear-gradient(45deg, #667eea, #764ba2, #ff6b6b);
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        /* animation: gradientShift 3s ease infinite; */
-        margin-bottom: 0.5rem;
-    }
-    
+
     .future-startups-subtitle {
-        font-size: 1.2rem;
-        color: var(--text-light);
-        font-style: italic;
-    }
-    
-    .future-startups-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        gap: 2.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .future-startup-card {
-        background: white;
-        border-radius: 1.5rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        position: relative;
-        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        border: 1px solid rgba(102, 126, 234, 0.1);
-    }
-    
-    .future-startup-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
-    
-    .card-glow {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, 
-            rgba(102, 126, 234, 0.1) 0%, 
-            rgba(118, 75, 162, 0.1) 50%, 
-            rgba(255, 107, 107, 0.1) 100%);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        z-index: 1;
-    }
-    
-    .future-startup-card:hover .card-glow {
-        opacity: 1;
-    }
-    
-    .future-startup-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 2rem;
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        position: relative;
-        z-index: 2;
-    }
-    
-    .hydrovolt-card .future-startup-header {
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    }
-    
-    .hyblend-card .future-startup-header {
-        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    }
-    
-    .startup-logo-wrapper {
-        position: relative;
-        flex-shrink: 0;
-    }
-    
-    .future-startup-logo {
-        width: 60px;
-        height: 60px;
-        border-radius: 0.75rem;
-        object-fit: contain;
-        background: white;
-        padding: 0.5rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
-        position: relative;
-        z-index: 2;
-    }
-    
-    .future-startup-card:hover .future-startup-logo {
-        transform: scale(1.05);
-    }
-    
-    .logo-glow {
-        position: absolute;
-        top: -5px;
-        left: -5px;
-        right: -5px;
-        bottom: -5px;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
-        border-radius: 1.25rem;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-    
-    .future-startup-card:hover .logo-glow {
-        opacity: 1;
-    }
-    
-    .startup-info {
-        flex: 1;
-    }
-    
-    .future-startup-name {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: white;
-        margin-bottom: 0.5rem;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-    
-    .status-badge {
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 25px;
-        font-size: 0.9rem;
+        justify-content: center;
+        gap: 0.4rem;
+        font-size: 0.85rem;
         font-weight: 600;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+        background: rgba(37, 99, 235, 0.12);
+        padding: 0.35rem 0.9rem;
+        border-radius: 999px;
+        margin-bottom: 0.75rem;
     }
-    
-    .status-dot {
-        width: 8px;
-        height: 8px;
-        background: #10b981;
-        border-radius: 50%;
-        animation: pulse 2s infinite;
+
+    .future-startups-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 0.75rem;
     }
-    
-    .future-startup-content {
-        padding: 2rem;
-        position: relative;
-        z-index: 2;
-    }
-    
-    .startup-tagline h5 {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-        text-align: center;
-        line-height: 1.4;
-    }
-    
-    .startup-description {
+
+    .future-startups-description {
+        color: var(--text-light);
         font-size: 1rem;
         line-height: 1.7;
-        color: var(--text-light);
-        margin-bottom: 2rem;
-        text-align: center;
     }
-    
-    .startup-highlights {
+
+    .future-startups-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.75rem;
+    }
+
+    .future-startup-card {
+        background: var(--bg-white);
+        border: 1px solid var(--border-color);
+        border-radius: 1.25rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .future-startup-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .future-startup-meta {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    .future-startup-brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .future-startup-logo {
+        width: 56px;
+        height: 56px;
+        border-radius: 0.75rem;
+        background: var(--bg-light);
+        border: 1px solid var(--border-color);
+        padding: 0.5rem;
+        object-fit: contain;
+        transition: transform 0.2s ease;
+    }
+
+    .future-startup-card:hover .future-startup-logo {
+        transform: scale(1.03);
+    }
+
+    .future-startup-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .future-startup-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin: 0;
+    }
+
+    .future-startup-status {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(37, 99, 235, 0.12);
+        color: var(--secondary-color);
+    }
+
+    .future-startup-card[data-theme="green"] .future-startup-status {
+        background: rgba(16, 185, 129, 0.15);
+        color: #047857;
+    }
+
+    .future-startup-card[data-theme="amber"] .future-startup-status {
+        background: rgba(245, 158, 11, 0.2);
+        color: #b45309;
+    }
+
+    .future-startup-tag {
+        align-self: center;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 0.35rem 0.8rem;
+        border-radius: 999px;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--secondary-color);
+        white-space: nowrap;
+    }
+
+    .future-startup-card[data-theme="green"] .future-startup-tag {
+        background: rgba(16, 185, 129, 0.12);
+        color: #047857;
+    }
+
+    .future-startup-card[data-theme="amber"] .future-startup-tag {
+        background: rgba(245, 158, 11, 0.18);
+        color: #b45309;
+    }
+
+    .future-startup-summary {
+        color: var(--text-light);
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .future-startup-highlights {
+        list-style: none;
+        margin: 0;
+        padding: 0;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        margin-bottom: 2rem;
     }
-    
-    .future-startup-card .highlight-item {
+
+    .future-startup-highlights li {
         display: flex;
         align-items: flex-start;
-        gap: 1rem;
-        padding: 1.5rem;
-        background: rgba(255, 255, 255, 0.8);
+        gap: 0.85rem;
+        padding: 0.9rem 1rem;
+        background: var(--bg-light);
+        border: 1px solid var(--border-color);
         border-radius: 1rem;
-        border: 1px solid rgba(102, 126, 234, 0.1);
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
+        transition: border-color 0.2s ease, background 0.2s ease;
     }
-    
-    .future-startup-card .highlight-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    .future-startup-card:hover .future-startup-highlights li {
+        border-color: rgba(37, 99, 235, 0.2);
     }
-    
-    .future-startup-card .highlight-icon {
+
+    .future-startup-highlights svg {
         flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        color: var(--primary-color);
-        margin-top: 0.25rem;
+        margin-top: 0.15rem;
+        color: var(--secondary-color);
     }
-    
-    .future-startup-card .highlight-content {
-        flex: 1;
-        min-width: 0;
+
+    .future-startup-card[data-theme="green"] .future-startup-highlights svg {
+        color: #047857;
     }
-    
-    .future-startup-card .highlight-content strong {
+
+    .future-startup-card[data-theme="amber"] .future-startup-highlights svg {
+        color: #b45309;
+    }
+
+    .future-startup-highlights strong {
         display: block;
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-weight: 600;
         color: var(--text-dark);
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
     }
-    
-    .future-startup-card .highlight-content p {
-        font-size: 0.9rem;
-        color: var(--text-light);
-        line-height: 1.5;
+
+    .future-startup-highlights p {
         margin: 0;
+        color: var(--text-light);
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
-    
-    .startup-contact {
-        text-align: center;
-        padding-top: 1.5rem;
-        border-top: 1px solid rgba(102, 126, 234, 0.1);
+
+    .future-startup-actions {
+        margin-top: auto;
     }
-    
+
+    .future-startup-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .future-startup-link svg {
+        transition: transform 0.2s ease;
+    }
+
+    .future-startup-link:hover {
+        color: var(--primary-color);
+    }
+
+    .future-startup-link:hover svg {
+        transform: translateX(3px);
+    }
+
+    .future-startup-card[data-theme="green"] .future-startup-link {
+        color: #047857;
+    }
+
+    .future-startup-card[data-theme="green"] .future-startup-link:hover {
+        color: #065f46;
+    }
+
+    .future-startup-card[data-theme="amber"] .future-startup-link {
+        color: #b45309;
+    }
+
+    .future-startup-card[data-theme="amber"] .future-startup-link:hover {
+        color: #92400e;
+    }
     .contact-btn {
         display: inline-flex;
         align-items: center;
@@ -2265,28 +2272,11 @@ section {
         box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
     }
     
-    .hydrovolt-card .contact-btn {
-        background: linear-gradient(135deg, #10b981, #059669);
-        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
-    }
-    
-    .hydrovolt-card .contact-btn:hover {
-        box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
-    }
-    
-    .hyblend-card .contact-btn {
-        background: linear-gradient(135deg, #f59e0b, #d97706);
-        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
-    }
-    
-    .hyblend-card .contact-btn:hover {
-        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
-    }
-    
     .hero-full-image {
         object-position: center 20%;
     }
 }
+
 
 @media (max-width: 640px) {
     .research-grid {
@@ -2308,53 +2298,31 @@ section {
     /* Future Startups Mobile Styles */
     .future-startups-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
-    
+
     .future-startup-card {
-        margin-bottom: 1rem;
+        padding: 1.75rem;
     }
-    
-    .future-startup-header {
+
+    .future-startup-meta {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
         gap: 1rem;
-        padding: 1.5rem;
     }
-    
-    .future-startup-name {
-        font-size: 1.25rem;
+
+    .future-startup-tag {
+        align-self: flex-start;
     }
-    
-    .future-startup-content {
-        padding: 1.5rem;
+
+    .future-startup-highlights li {
+        padding: 0.85rem 1rem;
     }
-    
-    .startup-tagline h5 {
-        font-size: 1.1rem;
-    }
-    
-    .startup-description {
+
+    .future-startup-link {
         font-size: 0.95rem;
     }
-    
-    .startup-highlights {
-        gap: 0.75rem;
-    }
-    
-    .future-startup-card .highlight-item {
-        padding: 1rem;
-        gap: 0.75rem;
-    }
-    
-    .future-startup-card .highlight-content strong {
-        font-size: 0.95rem;
-    }
-    
-    .future-startup-card .highlight-content p {
-        font-size: 0.85rem;
-    }
-    
+
     .contact-btn {
         padding: 0.75rem 1.5rem;
         font-size: 0.9rem;
@@ -2431,5 +2399,4 @@ section {
         max-width: 250px;
     }
 }
-
 
