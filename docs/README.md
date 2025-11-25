@@ -38,7 +38,7 @@ This website is designed to be deployed on GitHub Pages. Simply push to the `mai
 
 ## Contact
 
-For inquiries, please contact: k.alsamri@uci.edu
+For inquiries, please contact: team@rectifygo.com
 
 ---
 
