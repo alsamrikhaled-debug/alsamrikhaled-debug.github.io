@@ -425,6 +425,9 @@ img {
     position: relative;
     z-index: 3;
     animation: fadeInUp 1s ease-out;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero-text-overlay {
